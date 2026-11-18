@@ -8,9 +8,8 @@ Participants need on their (VDI) machine:
 - **Git**, or permission to download the repository as a ZIP.
 - **VS Code** with the *Python* and *Jupyter* extensions, or **PyCharm**.
 - **Access to pypi.org** and files.pythonhosted.org, or the URL of an internal package mirror.
-- **Outbound HTTPS to `opendata-download-metobs.smhi.se`** (lab 060) and **`api.sampleapis.com`** (lab 070).
 - **A local folder that is kept between sessions and not synced by OneDrive**, e.g. `C:\dev`.
-- *Lab 080 only:*
+- *Lab 060 only:*
   - "ODBC Driver 18 for SQL Server", and network access to the on-prem MinIO and to SQL Server.
   - A MinIO access key, and a SQL Server login (username and password) that can create a schema.
   - If MinIO uses a certificate from the company's own CA, that CA as a PEM file.

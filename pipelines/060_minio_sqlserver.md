@@ -1,4 +1,4 @@
-# 080 · Template: files from MinIO into SQL Server
+# 060 · Template: files from MinIO into SQL Server
 
 **Goal:** load CSV files from your on-prem MinIO into SQL Server. It's lab 050's pipeline pointed at a bucket and a real database. This is the only lab that needs credentials, and every connection detail lives in `.dlt/secrets.toml`.
 
@@ -32,25 +32,25 @@ Until every setting is filled in, the script stops and lists the ones that are m
 ## Run
 
 ```powershell
-python pipelines/080_minio_sqlserver.py
+python pipelines/060_minio_sqlserver.py
 ```
 
-This loads 5 orders into `lab_080_minio_sqlserver.orders`.
+This loads 5 orders into `lab_060_minio_sqlserver.orders`.
 
 ## Check in SQL Server
 
 In SSMS or VS Code's SQL Server (mssql) extension:
 
 ```sql
-select * from lab_080_minio_sqlserver.orders;
-select * from lab_080_minio_sqlserver._dlt_loads;
+select * from lab_060_minio_sqlserver.orders;
+select * from lab_060_minio_sqlserver._dlt_loads;
 ```
 
 ## Try this
 
 1. **Upload a new file.** Upload `data/050_incremental_state/later/orders_2026-11-18.csv` to the same folder and run again. Only that file is loaded.
-2. **Look at the cursor:** `dlt pipeline lab_080_minio_sqlserver info -v`. Its `last_value` is the upload time of the newest file.
-3. **Start over:** `dlt -y pipeline lab_080_minio_sqlserver drop --drop-all`. It drops the table and resets the cursor, so the next run loads every file again. Unlike in the DuckDB labs, the CLI can reach the database here, because the credentials are in `secrets.toml`.
+2. **Look at the cursor:** `dlt pipeline lab_060_minio_sqlserver info -v`. Its `last_value` is the upload time of the newest file.
+3. **Start over:** `dlt -y pipeline lab_060_minio_sqlserver drop --drop-all`. It drops the table and resets the cursor, so the next run loads every file again. Unlike in the DuckDB labs, the CLI can reach the database here, because the credentials are in `secrets.toml`.
 
 ## Troubleshooting
 
@@ -73,8 +73,6 @@ At millions of rows, INSERT statements get slow. dlt can bulk-copy into SQL Serv
 python -m pip install "dlt[parquet]" adbc-driver-manager dbc
 dbc install mssql
 ```
-
-Check with IT first: Columnar's mssql driver is closed source, and `dbc` sends a machine identifier with its requests.
 
 ## Takeaways
 

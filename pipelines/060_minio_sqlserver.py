@@ -1,7 +1,7 @@
-"""Lab 080 · Template: files from MinIO (S3) into SQL Server.
+"""Lab 060 · Template: files from MinIO (S3) into SQL Server.
 
 Reads CSV files from a MinIO bucket and loads them into SQL Server. Fill in .dlt/secrets.toml first
-(copy .dlt/secrets.toml.example). Instructions: pipelines/080_minio_sqlserver.md
+(copy .dlt/secrets.toml.example). Instructions: pipelines/060_minio_sqlserver.md
 """
 
 import csv
@@ -10,8 +10,8 @@ import re
 import dlt
 from dlt.sources.filesystem import filesystem
 
-PIPELINE_NAME = "lab_080_minio_sqlserver"  # unique on your machine: dlt keeps its state in ~/.dlt/pipelines/<this name>
-DATASET_NAME = "lab_080_minio_sqlserver"  # the schema in SQL Server that dlt creates; at work you'd pick your own, e.g. "src"
+PIPELINE_NAME = "lab_060_minio_sqlserver"  # unique on your machine: dlt keeps its state in ~/.dlt/pipelines/<this name>
+DATASET_NAME = "lab_060_minio_sqlserver"  # the schema in SQL Server that dlt creates; at work you'd pick your own, e.g. "src"
 
 # Every setting this lab needs from .dlt/secrets.toml. There are no connection details in the code.
 REQUIRED_SECRETS = [

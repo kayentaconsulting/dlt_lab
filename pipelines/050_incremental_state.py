@@ -26,7 +26,7 @@ def read_orders(files):
 
 
 # SOURCE: the filesystem source lists the files in a folder. The same code reads from a bucket
-# such as s3://, az:// or gs:// when bucket_url points there (lab 080 reads from MinIO).
+# such as s3://, az:// or gs:// when bucket_url points there (lab 060 reads from MinIO).
 @dlt.source(name="sales_orders")
 def sales_orders():
     files = filesystem(

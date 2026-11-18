@@ -23,11 +23,7 @@ The labs, worked through in number order. Each lab `NNN_<topic>` has two files:
 | `NNN_<topic>.md` | The lab's instructions: start here. |
 | `NNN_<topic>.py` | The pipeline. Run it from the repo root. |
 
-Each pipeline loads into its own schema in `db/local_data.duckdb`: its `dataset_name`, e.g. `lab_010_csv_basics`. Two labs are templates that you complete yourself:
-- 070, where you build your own REST API pipeline;
-- the last lab, a MinIO (S3) → SQL Server template that needs credentials.
-
-All other labs run as-is.
+Each pipeline loads into its own schema in `db/local_data.duckdb`: its `dataset_name`, e.g. `lab_010_csv_basics`. The last lab is a MinIO (S3) → SQL Server template that needs credentials. All other labs run as-is.
 
 ## `data/`
 
