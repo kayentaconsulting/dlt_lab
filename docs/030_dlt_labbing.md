@@ -75,7 +75,7 @@ The labs set the DuckDB path in their code, and the CLI can't see it. So command
 
 ## Start over
 
-Delete the database **and** the pipeline's working folder. If you delete only the database, dlt still remembers its state, for example how far an incremental load got.
+Delete the database **and** the pipeline's working folder. Deleting the database alone also resets the state, but only on each lab's next run: dlt then finds no dataset and clears the working folder. Deleting both makes the reset immediate, so `dlt pipeline <name> info` shows it too.
 
 ```powershell
 Remove-Item -Force db\local_data.duckdb

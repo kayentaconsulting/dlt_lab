@@ -53,6 +53,7 @@ q("select file_name, _dlt_load_id, count(*) as orders from lab_050_incremental_s
      Remove-Item -Recurse -Force $HOME\.dlt\pipelines\lab_050_incremental_state
      ```
      Nothing is loaded again: dlt found no local state, restored it from `_dlt_pipeline_state` and carried on where it was. This is what lets a pipeline move to another machine.
+   - **If both exist**, `pipeline.run()` compares their versions before it extracts anything. The version is a counter that goes up each time the state changes. The destination's state wins if its version is the same or higher. The local one wins only when it has changes that haven't been loaded yet, for example after a failed load. And if the dataset is missing from the destination, dlt resets the local state instead. (`pipeline.extract()` on its own doesn't check the destination.)
 
 3. **A late file.** Move `later\orders_2026-11-15.csv` into `incoming/` and run. Nothing is loaded:
    - `orders_2026-11-15.csv` sorts before `orders_2026-11-18.csv`, so the cursor skips it.
