@@ -1,0 +1,4 @@
+# Use LF line endings in the repo and in every checkout, whatever the OS or git settings.
+# Git for Windows converts to CRLF by default (core.autocrlf=true); this keeps sample files
+# byte-identical for Windows and WSL users and stops CRLF commits. Binary files (.xlsx) are untouched.
+* text=auto eol=lf

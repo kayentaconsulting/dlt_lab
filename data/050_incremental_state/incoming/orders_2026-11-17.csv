@@ -1,0 +1,4 @@
+order_id,order_date,customer_name,city,country,status
+1015,2026-11-17,Linnea Berg,Göteborg,SE,processing
+1016,2026-11-17,Mads Jensen,Odense,DK,processing
+1017,2026-11-17,Saga Nyström,Örebro,SE,processing

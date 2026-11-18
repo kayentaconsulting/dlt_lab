@@ -1,0 +1,9 @@
+order_id,order_date,customer_name,city,country,status
+1001,2026-10-01,Anna Lindqvist,Stockholm,SE,delivered
+1002,2026-10-02,Erik Johansson,Göteborg,SE,delivered
+1003,2026-10-03,Sofia Åberg,Malmö,SE,shipped
+1004,2026-10-05,Lars Öberg,Uppsala,SE,shipped
+1005,2026-10-06,Mikkel Hansen,København,DK,processing
+1006,2026-10-08,Ingrid Solberg,Oslo,NO,processing
+1007,2026-10-09,Johan Bäckström,Örebro,SE,cancelled
+1008,2026-10-10,Aino Virtanen,Helsinki,FI,processing

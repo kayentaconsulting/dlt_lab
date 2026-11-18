@@ -1,0 +1,97 @@
+[
+  {
+    "order_id": 1001,
+    "order_date": "2026-10-01",
+    "customer_name": "Anna Lindqvist",
+    "city": "Stockholm",
+    "country": "SE",
+    "status": "delivered",
+    "order_lines": [
+      {"line_number": 1, "product": "Kaffebryggare", "quantity": 1, "unit_price": 899.00},
+      {"line_number": 2, "product": "Kaffefilter 100 st", "quantity": 2, "unit_price": 29.90}
+    ]
+  },
+  {
+    "order_id": 1002,
+    "order_date": "2026-10-02",
+    "customer_name": "Erik Johansson",
+    "city": "Göteborg",
+    "country": "SE",
+    "status": "delivered",
+    "order_lines": [
+      {"line_number": 1, "product": "Vattenkokare", "quantity": 1, "unit_price": 449.00}
+    ]
+  },
+  {
+    "order_id": 1003,
+    "order_date": "2026-10-03",
+    "customer_name": "Sofia Åberg",
+    "city": "Malmö",
+    "country": "SE",
+    "status": "shipped",
+    "order_lines": [
+      {"line_number": 1, "product": "Skärbräda ek", "quantity": 1, "unit_price": 349.00},
+      {"line_number": 2, "product": "Kökshandduk", "quantity": 3, "unit_price": 79.00},
+      {"line_number": 3, "product": "Brödkniv", "quantity": 1, "unit_price": 299.00}
+    ]
+  },
+  {
+    "order_id": 1004,
+    "order_date": "2026-10-05",
+    "customer_name": "Lars Öberg",
+    "city": "Uppsala",
+    "country": "SE",
+    "status": "shipped",
+    "order_lines": [
+      {"line_number": 1, "product": "Tekanna", "quantity": 1, "unit_price": 399.00},
+      {"line_number": 2, "product": "Te Earl Grey 100 g", "quantity": 2, "unit_price": 59.00}
+    ]
+  },
+  {
+    "order_id": 1005,
+    "order_date": "2026-10-06",
+    "customer_name": "Mikkel Hansen",
+    "city": "København",
+    "country": "DK",
+    "status": "processing",
+    "order_lines": [
+      {"line_number": 1, "product": "Glögglas 4 st", "quantity": 2, "unit_price": 199.00}
+    ]
+  },
+  {
+    "order_id": 1006,
+    "order_date": "2026-10-08",
+    "customer_name": "Ingrid Solberg",
+    "city": "Oslo",
+    "country": "NO",
+    "status": "processing",
+    "order_lines": [
+      {"line_number": 1, "product": "Termosmugg", "quantity": 2, "unit_price": 249.00},
+      {"line_number": 2, "product": "Ullfilt", "quantity": 1, "unit_price": 1290.00}
+    ]
+  },
+  {
+    "order_id": 1007,
+    "order_date": "2026-10-09",
+    "customer_name": "Johan Bäckström",
+    "city": "Örebro",
+    "country": "SE",
+    "status": "cancelled",
+    "order_lines": [
+      {"line_number": 1, "product": "Brödrost", "quantity": 1, "unit_price": 599.00}
+    ]
+  },
+  {
+    "order_id": 1008,
+    "order_date": "2026-10-10",
+    "customer_name": "Aino Virtanen",
+    "city": "Helsinki",
+    "country": "FI",
+    "status": "processing",
+    "order_lines": [
+      {"line_number": 1, "product": "Ljusstake mässing", "quantity": 2, "unit_price": 349.00},
+      {"line_number": 2, "product": "Kronljus 10 st", "quantity": 1, "unit_price": 89.00},
+      {"line_number": 3, "product": "Servetter 50 st", "quantity": 2, "unit_price": 39.00}
+    ]
+  }
+]

@@ -1,0 +1,3 @@
+order_id,order_date,customer_name,city,country,status
+1018,2026-11-18,Ville Laine,Tampere,FI,processing
+1019,2026-11-18,Ebba Åström,Malmö,SE,processing

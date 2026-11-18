@@ -1,0 +1,18 @@
+# Python: virtual environment (created during install) and bytecode
+.venv/
+__pycache__/
+*.py[cod]
+
+# dlt: local credentials (the template secrets.toml.example is committed)
+.dlt/secrets.toml
+
+# DuckDB database the pipelines create in db/, plus its write-ahead log and spill folder
+*.duckdb
+*.duckdb.wal
+*.duckdb.tmp/
+
+# PyCharm project settings
+.idea/
+
+# Environment files, in case someone puts credentials there
+.env

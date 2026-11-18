@@ -1,0 +1,3 @@
+order_id,order_date,customer_name,city,country,status
+1013,2026-11-16,Maja Lund,Västerås,SE,shipped
+1014,2026-11-16,Henrik Dahl,Bergen,NO,processing
