@@ -8,7 +8,7 @@
 |---------|-------------|
 | Filesystem source | `filesystem(bucket_url=..., file_glob="*.csv")` lists the files in a folder. It yields file items, not rows. The same code reads a bucket (`s3://`, `az://`, `gs://`); lab 060 reads MinIO. |
 | Transformer | `read_orders` takes the file items and yields their rows, with `file_name` on every row. `files \| read_orders` connects the two. |
-| Incremental | `dlt.sources.incremental("file_name")`: dlt remembers the highest file name it has loaded. The next run only passes on files whose name sorts after it. |
+| Incremental | `dlt.sources.incremental("file_name", last_value_func=max)`: dlt remembers the highest file name it has loaded. The next run only passes on files whose name sorts after it. With `min`, it remembers the lowest name and only earlier files pass. |
 | Pipeline state | Where that cursor is kept: locally in `~/.dlt/pipelines/<name>/state.json`, and in the destination table `_dlt_pipeline_state`. That's why it can be restored. |
 
 ## The data

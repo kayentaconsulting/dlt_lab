@@ -34,7 +34,8 @@ def sales_orders():
         file_glob="*.csv",
         # INCREMENTAL: dlt remembers the highest file name it has loaded, in the pipeline state.
         # The next run only passes on files whose name sorts after it. The names hold the date.
-        incremental=dlt.sources.incremental("file_name"),
+        # max is the default, written out to show the choice: min remembers the lowest name instead.
+        incremental=dlt.sources.incremental("file_name", last_value_func=max),
     )
     return files | read_orders  # the pipe operator feeds the files into the transformer
 
